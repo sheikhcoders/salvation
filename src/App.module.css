@@ -1,54 +1,302 @@
+.layout {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+.content {
+  background: #000;
+}
+
+/* 2.1 Header Section */
 .header {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 64px;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s;
+  border-bottom: 1px solid transparent;
 }
 
+.headerScrolled {
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.headerLeft {
+  flex: 0 0 150px;
+  display: flex;
+  align-items: center;
+}
+
+.headerCenter {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.headerRight {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoSvg {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.logoText {
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.desktopMenu {
+  background: transparent !important;
+  border-bottom: none !important;
+  line-height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navActionLink {
+  color: #8c8c8c !important;
+}
+
+.navActionLink:hover {
+  color: #fff !important;
+}
+
+.mobileMenuBtn {
+  display: none !important;
+  color: #fff !important;
+}
+
+/* 2.2 Hero Section */
 .heroSection {
-  padding: 80px 50px;
+  padding: 120px 50px;
+  position: relative;
   text-align: center;
-  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  overflow: hidden;
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.heroGlow {
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(22, 119, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
 }
 
 .heroTitle {
-  font-size: 48px;
-  margin-bottom: 24px;
+  font-size: 64px !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 24px !important;
+  line-height: 1.1 !important;
 }
 
 .heroSubtitle {
-  font-size: 20px;
-  color: #666;
+  font-size: 22px !important;
+  color: #bfbfbf !important;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 40px !important;
 }
 
-.featuresSection {
-  padding: 80px 50px;
+.heroCta {
+  height: 50px !important;
+  padding: 0 40px !important;
+  font-size: 18px !important;
 }
 
-.featureCard {
-  text-align: center;
+.meshGradient {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(transparent, rgba(22, 119, 255, 0.05), transparent);
+  animation: wave 10s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* 2.3 Product Tiers Section */
+.tiersSection {
+  padding: 100px 50px;
+  background: #000;
+}
+
+.tierCard {
+  background: #141414 !important;
+  border: 1px solid #303030 !important;
+  border-radius: 16px !important;
   height: 100%;
-  background: #f9f9f9;
-}
-
-.detailsSection {
-  padding: 80px 50px;
-  background: #f0f2f5;
-}
-
-.codeBlock {
-  background: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.footer {
   text-align: center;
-  background: #fff;
-  border-top: 1px solid #f0f0f0;
+  transition: transform 0.3s, border-color 0.3s !important;
+}
+
+.tierCard h3 {
+  color: #fff !important;
+}
+
+.tierCard p {
+  color: #8c8c8c !important;
+}
+
+.tierCard:hover {
+  transform: translateY(-8px);
+  border-color: #434343 !important;
+}
+
+.tierCardPrimary {
+  background: linear-gradient(135deg, #001d66 0%, #000 100%) !important;
+  border: 1px solid #1677ff !important;
+}
+
+.tierFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 32px;
+  text-align: left;
+}
+
+.tierFeatures li {
+  margin-bottom: 12px;
+  color: #bfbfbf;
+  display: flex;
+  align-items: center;
+}
+
+.tierFeatures li::before {
+  content: '✓';
+  color: #1677ff;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.tierCardPrimary .tierFeatures li {
+  color: #fff;
+}
+
+/* 2.4 Feature Grid Section */
+.featureGridSection {
+  padding: 100px 50px;
+  background: #050505;
+}
+
+.featureGridCard {
+  background: #141414 !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  height: 100%;
+  padding: 12px;
+  transition: all 0.3s !important;
+}
+
+.featureGridCard:hover {
+  background: #1f1f1f !important;
+  transform: translateY(-4px);
+  border-color: #1677ff !important;
+}
+
+.featureGridIcon {
+  font-size: 32px;
+  color: #1677ff;
+}
+
+/* 2.5 New Model Announcement */
+.announcementSection {
+  padding: 100px 50px;
+  background: #000;
+}
+
+.announcementBox {
+  background: linear-gradient(135deg, #001529 0%, #000 100%);
+  border: 1px solid #1f1f1f;
+  border-radius: 24px;
+  padding: 64px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.newBadge {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 2.6 Footer Section */
+.footer {
+  background: #000 !important;
+  padding: 80px 50px 40px !important;
+  border-top: 1px solid #1f1f1f !important;
+}
+
+.footerLink {
+  color: #8c8c8c !important;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #fff !important;
+}
+
+.newsletterInput :global(.ant-input-group-addon .ant-btn) {
+  background: #1677ff !important;
+  border-color: #1677ff !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+  .headerCenter, .desktopActions {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block !important;
+  }
+  .headerRight {
+    flex: 0 0 50px;
+  }
+  .header {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroSection {
+    padding: 80px 24px;
+  }
+  .heroTitle {
+    font-size: 40px !important;
+  }
+  .announcementBox {
+    padding: 40px 24px;
+  }
 }

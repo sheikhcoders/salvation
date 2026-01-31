@@ -2,14 +2,27 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 import { expect, test } from 'vitest';
 
-test('renders landing page title', () => {
+test('renders landing page hero title', () => {
   render(<App />);
-  const titleElement = screen.getByText(/Prebuilt Agents with Proven AI Solutions/i);
-  expect(titleElement).toBeInTheDocument();
+  const titleElements = screen.getAllByText(/Supercharge Your Workflow with Intelligent Agents/i);
+  expect(titleElements[0]).toBeInTheDocument();
 });
 
-test('renders features section', () => {
+test('renders toolkit section title', () => {
   render(<App />);
-  const featureElement = screen.getByRole('heading', { name: /Multi-Agent System/i });
+  const toolkitTitle = screen.getByText(/A Complete Toolkit for Agentic Work/i);
+  expect(toolkitTitle).toBeInTheDocument();
+});
+
+test('renders intelligent coding feature', () => {
+  render(<App />);
+  const featureElement = screen.getByText(/Intelligent Coding/i);
   expect(featureElement).toBeInTheDocument();
+});
+
+test('renders product tiers', () => {
+  render(<App />);
+  expect(screen.getAllByText(/Lightning/i).length).toBeGreaterThan(0);
+  expect(screen.getAllByText(/Custom/i).length).toBeGreaterThan(0);
+  expect(screen.getAllByText(/Pro/i).length).toBeGreaterThan(0);
 });
