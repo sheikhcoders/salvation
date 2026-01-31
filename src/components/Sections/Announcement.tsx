@@ -10,7 +10,7 @@ export const Announcement: React.FC = () => {
     <section className={styles.announcementSection}>
       <div className={styles.announcementBox}>
         <Tag color="blue" className={styles.newBadge}>NEW MODEL</Tag>
-        <Title level={2} style={{ color: '#fff', marginTop: '16px' }}>Introducing MiniMax-M2.1</Title>
+        <Title level={2} style={{ color: '#fff', marginTop: '16px' }}>Introducing Salvation-M2.1</Title>
         <Paragraph style={{ color: '#bfbfbf', fontSize: '18px' }}>
           Our most advanced model yet, specifically engineered for complex agentic workflows and tool use.
         </Paragraph>
@@ -40,7 +40,7 @@ export const Announcement: React.FC = () => {
             </Space>
           </Col>
         </Row>
-        <Button type="primary" size="large" shape="round">Try MiniMax-M2.1</Button>
+        <Button type="primary" size="large" shape="round">Try Salvation-M2.1</Button>
       </div>
     </section>
   );

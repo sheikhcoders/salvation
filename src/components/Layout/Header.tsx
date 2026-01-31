@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
       <div className={styles.headerLeft}>
         <div className={styles.logoContainer}>
           <img src="/logo.svg" alt="Logo" className={styles.logoSvg} />
-          <Title level={4} className={styles.logoText}>MiniMax</Title>
+          <Title level={4} className={styles.logoText}>Salvation</Title>
         </div>
       </div>
 

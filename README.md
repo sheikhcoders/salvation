@@ -1,6 +1,6 @@
-# MiniMax AI Agents
+# Salvation AI Agents
 
-Supercharge your workflow with intelligent, prebuilt agents designed for complex, long-horizon tasks. Powered by a multi-agent system, MiniMax delivers expert-level solutions through sophisticated planning and execution.
+Supercharge your workflow with intelligent, prebuilt agents designed for complex, long-horizon tasks. Powered by a multi-agent system, Salvation delivers expert-level solutions through sophisticated planning and execution.
 
 ## 🚀 Key Features
 
