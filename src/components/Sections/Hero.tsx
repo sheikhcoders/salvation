@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
         </Title>
         <Paragraph className={styles.heroSubtitle}>
           The next generation of AI agents for coding, research, and complex automation.
-          Powered by MiniMax-M2.1 for expert-level reasoning.
+          Powered by Salvation-M2.1 for expert-level reasoning.
         </Paragraph>
         <Space size="middle">
           <Button type="primary" size="large" shape="round" className={styles.heroCta}>
