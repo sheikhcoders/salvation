@@ -21,10 +21,10 @@ createRoot(document.getElementById('root')!).render(
             bodyBg: '#000000',
           },
           Card: {
-            containerBg: '#141414',
+            colorBgContainer: '#141414',
           },
           Menu: {
-            darkItemBg: 'transparent',
+            itemBg: 'transparent',
           }
         },
       }}

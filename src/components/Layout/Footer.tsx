@@ -17,8 +17,8 @@ export const Footer: React.FC = () => {
       <Row gutter={[48, 32]}>
         <Col xs={24} md={6}>
           <div className={styles.logoContainer}>
-            <RocketOutlined className={styles.logoIcon} />
-            <Title level={4} className={styles.logoText} style={{ color: '#fff' }}>MiniMax</Title>
+            <img src="/logo.svg" alt="Logo" className={styles.logoSvg} style={{ marginRight: '8px', filter: 'brightness(0) invert(1)' }} />
+            <Title level={4} className={styles.logoText} style={{ color: '#fff', margin: 0 }}>MiniMax</Title>
           </div>
           <Paragraph style={{ color: '#8c8c8c', marginTop: '16px' }}>
             Empowering the next generation of digital employees through advanced agentic AI.

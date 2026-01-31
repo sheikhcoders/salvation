@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Typography, Button, Space, Menu, Drawer, Divider } from 'antd';
-import { RocketOutlined, MenuOutlined, DownOutlined } from '@ant-design/icons';
+import { MenuOutlined, DownOutlined } from '@ant-design/icons';
 import styles from '../../App.module.css';
 
 const { Header: AntHeader } = Layout;
